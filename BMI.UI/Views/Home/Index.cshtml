@@ -1,0 +1,103 @@
+﻿@{
+    ViewBag.Title = "Body Mass Index (BMI) Application";
+}
+<script src="~/Scripts/jquery-1.7.1.js"></script>
+<script src="~/Scripts/jquery.filedrop.js"></script>
+<link href="~/Content/filedrop.css" rel="stylesheet" />
+<script type="text/javascript">
+    $(function () {
+	$('#dropZone').filedrop({
+		url: '@Url.Action("UploadFiles")',
+		paramname: 'files',
+		maxFiles: 5,
+		dragOver: function () {
+			$('#dropZone').css('background', 'blue');
+		},
+		dragLeave: function () {
+			$('#dropZone').css('background', 'gray');
+		},
+		drop: function () {
+			$('#dropZone').css('background', 'gray');
+		},
+		afterAll: function () {
+			$('#dropZone').html('The file(s) have been uploaded successfully!');
+		},
+        uploadFinished: function (i, file, response, time) {
+
+            if (response) {
+                var result = JSON.parse(response);
+
+                $('#SummaryMessage').html("Processed " + result.TotalRecords + " in " + result.ElapsedMilliseconds / 1000 +" sec");
+                result.results.forEach(function (element) {
+                    if (element.CategoryName == "Underweight")
+                        $('#divUnderWeigth').html(element.PatientCount);
+                    if (element.CategoryName == "Normal weight")
+                        $('#divNormalWeight').html(element.PatientCount);
+                    if (element.CategoryName == "Pre-obesity")
+                        $('#divPreObesity').html(element.PatientCount);
+                    if (element.CategoryName == "Obesity class I")
+                        $('#divObesityClassI').html(element.PatientCount);
+                   });
+             
+            }
+
+		}
+	});
+});
+</script>
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 ">
+                <h3>Patients Data File Drag & Drop (JSON)</h3>
+                <div id="dropZone">Drop your files here</div>
+                <br />
+              
+            </div>
+
+            <div class="col-sm-6 ">
+                <div  class="divTableHeader"></div>
+                <div class="divTable" style="width: 80%;border: 1px solid #000;">
+                    <div class="divTableBody">
+                        <div class="divTableRow">
+                            <div class="divTableCell tableHeading">BMI Category</div>
+                            <div class="divTableCell tableHeading">Patient Count</div>
+                        </div>
+                        <div class="divTableRow">
+                            <div class="divTableCell">Underweight</div>
+                            <div id="divUnderWeigth" class="divTableCell">&nbsp;</div>
+                        </div>
+                        <div class="divTableRow">
+                            <div class="divTableCell">Normal weight</div>
+                            <div id="divNormalWeight" class="divTableCell">&nbsp;</div>
+                        </div>
+                        <div class="divTableRow">
+                            <div class="divTableCell">Pre-obesity</div>
+                            <div id="divPreObesity" class="divTableCell">&nbsp;</div>
+                        </div>
+                        <div class="divTableRow">
+                            <div class="divTableCell">Obesity class I</div>
+                            <div id="divObesityClassI" class="divTableCell">&nbsp;</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="SummaryMessage" class="SummaryMessage"></div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="row">
+    <div class="col-md-12">
+
+        <h2>Example Files</h2>
+        <a href="~/TestData/Test01.json" download=""> Example#1 </a>
+        <br />
+        <a href="~/TestData/Test02.json" download=""> Example#2 </a>
+        <br />
+        <a href="~/TestData/Test31.json" download=""> Example#3 </a>
+    </div>
+
+</div>

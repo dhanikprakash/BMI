@@ -1,0 +1,10 @@
+C:\Users\User1\source\repos\BMI\BMI.BusinessLayer\obj\Debug\BMI.BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\User1\source\repos\BMI\BMI.BusinessLayer\obj\Debug\BMI.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\User1\source\repos\BMI\BMI.BusinessLayer\bin\Debug\BMI.BusinessLayer.dll
+C:\Users\User1\source\repos\BMI\BMI.BusinessLayer\bin\Debug\BMI.BusinessLayer.pdb
+C:\Users\User1\source\repos\BMI\BMI.BusinessLayer\bin\Debug\BMI.dll
+C:\Users\User1\source\repos\BMI\BMI.BusinessLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User1\source\repos\BMI\BMI.BusinessLayer\bin\Debug\BMI.pdb
+C:\Users\User1\source\repos\BMI\BMI.BusinessLayer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User1\source\repos\BMI\BMI.BusinessLayer\obj\Debug\BMI.BusinessLayer.dll
+C:\Users\User1\source\repos\BMI\BMI.BusinessLayer\obj\Debug\BMI.BusinessLayer.pdb

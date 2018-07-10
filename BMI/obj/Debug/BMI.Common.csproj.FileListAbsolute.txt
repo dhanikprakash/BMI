@@ -1,0 +1,5 @@
+C:\Users\User1\source\repos\BMI\BMI\bin\Debug\BMI.dll
+C:\Users\User1\source\repos\BMI\BMI\bin\Debug\BMI.pdb
+C:\Users\User1\source\repos\BMI\BMI\obj\Debug\BMI.Common.csproj.CoreCompileInputs.cache
+C:\Users\User1\source\repos\BMI\BMI\obj\Debug\BMI.dll
+C:\Users\User1\source\repos\BMI\BMI\obj\Debug\BMI.pdb

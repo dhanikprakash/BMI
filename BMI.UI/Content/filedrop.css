@@ -1,0 +1,53 @@
+﻿#dropZone {
+    background: gray;
+    border: black dashed 3px;
+    width: 100%;
+    padding: 100px;
+    text-align: center;
+    color: white;
+}
+.divTable {
+    display: table;
+    width: 100%;
+
+}
+.divTableHeader {
+    height: 55px;
+}
+.SummaryMessage {
+    font-size:15px;
+}
+.divTableRow {
+    display: table-row;
+}
+.tableHeading{
+    background:gray;
+    color:white;
+}
+.divTableHeading {
+    background-color: #EEE;
+    display: table-header-group;
+}
+
+.divTableCell, .divTableHead {
+    border: 1px solid #999999;
+    display: table-cell;
+    padding: 1px;
+    font-size: 18px;
+}
+
+.divTableHeading {
+    background-color: #EEE;
+    display: table-header-group;
+    font-weight: bold;
+}
+
+.divTableFoot {
+    background-color: #EEE;
+    display: table-footer-group;
+    font-weight: bold;
+}
+
+.divTableBody {
+    display: table-row-group;
+}
